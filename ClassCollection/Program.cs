@@ -16,6 +16,8 @@ namespace ClassCollection
             person.Age = 10;
             Person person2 = PersonHandler.CreatPerson(30, "Ahmad", "Al Hafar", 188, 115);
 
+            /*Creat UnitTest to test all actions
+
             //3,2---///////////////////////////////////////////////////////
             Dog dog1, dog2, dog3, dog4;
             AddValueListofDogs(out dog1, out dog2, out dog3, out dog4);

@@ -18,8 +18,14 @@ namespace TestClassesOperations
             Assert.AreEqual(p1.FName, "Ahmad");
             Assert.AreEqual(p1.LNname, "Al Hafar");
             p1 = PersonHandler.CreatPerson(38, "Ahmad", "Al Hafar", 188, 120);
-            Person p2 = new Person();
-            p2.Age = 38; p2.FName = "Ahmad";p2.LNname = "Al Hafar";p2.Height = 188;p2.Weight = 120;
+            Person p2 = new Person
+            {
+                Age = 38,
+                FName = "Ahmad",
+                LNname = "Al Hafar",
+                Height = 188,
+                Weight = 120
+            };
             Assert.AreEqual(p1.FName, p2.FName);
             Assert.AreEqual(p1.LNname, p2.LNname);
             Assert.AreEqual(p1.Height, p2.Height); 
