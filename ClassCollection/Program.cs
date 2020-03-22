@@ -10,13 +10,13 @@ namespace ClassCollection
     {
         static void Main(string[] args)
         {
-            /*
+            
             //3,1---///////////////////////////////////////////////////////
             Person person = new Person();
             person.Age = 10;
             Person person2 = PersonHandler.CreatPerson(30, "Ahmad", "Al Hafar", 188, 115);
 
-            /*Creat UnitTest to test all actions
+            //It is a UnitTest to test all actions
 
             //3,2---///////////////////////////////////////////////////////
             Dog dog1, dog2, dog3, dog4;
@@ -31,7 +31,7 @@ namespace ClassCollection
             TestUseFatherOrCHild();
 
             //3,4---///////////////////////////////////////////////////////
-            */
+            
             PrintUEMessage();
             PrintCustomUEMessage();
             //F:11 Use one name action with different way depending on needs
@@ -80,9 +80,8 @@ namespace ClassCollection
         {
             Animal testuseSonMethod = new Dog();
             Dog testuseFatherMethod = new Dog();
-
-            string test1 = testuseSonMethod.PrintHelloImFather();
-            string test2 = testuseFatherMethod.PrintHelloImSon();
+            _ = testuseSonMethod.PrintHelloImFather();
+            _ = testuseFatherMethod.PrintHelloImSon();
             testuseSonMethod.Stats();
         }
 
@@ -137,12 +136,18 @@ namespace ClassCollection
         private static void AddValueListofDogs(out Dog dog1, out Dog dog2, out Dog dog3, out Dog dog4)
         {
             dog1 = new Dog(3.5, 12, "male", "German Shepherd");
-            dog2 = new Dog();
-            dog2.DogKind = "Bulldog";
-            dog3 = new Dog();
-            dog3.DogKind = "Golden Retriever";
-            dog4 = new Dog();
-            dog4.DogKind = "Poodle";
+            dog2 = new Dog
+            {
+                DogKind = "Bulldog"
+            };
+            dog3 = new Dog
+            {
+                DogKind = "Golden Retriever"
+            };
+            dog4 = new Dog
+            {
+                DogKind = "Poodle"
+            };
         }
     }
 }
